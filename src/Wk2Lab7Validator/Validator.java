@@ -19,25 +19,12 @@ public class Validator {
 	return input;
 	}
 	
-	public static String getEmail(Scanner scan, String prompt, String regex) {
-		boolean isValid = false;
-		String input;
-		do { 
-			input = getString(scan, prompt);
-			if (input.matches(regex)) {
-				isValid = true;
-			}else {
-				System.out.println("Input must match correct format:");
-				isValid = false;
-			}
-		}while (!isValid);
-	return input;
-	}
+	
 	
 	public static String getString(Scanner sc, String prompt) {
 		System.out.print(prompt);
-		String s = sc.next(); // read user entry
-		sc.nextLine(); // discard any other data entered on the line
+		String s = sc.nextLine(); // read user entry
+		//sc.nextLine(); // discard any other data entered on the line
 		return s;
 	}
 
